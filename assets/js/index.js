@@ -253,23 +253,23 @@ function fileClosure(){
       alt = alt.replace(inline, "");
 
       // wait for position to load and a caption if the image is not online and has an alt attribute
-      if (alt.length > 0 && !containsClass(image, 'alt' && !isInline)) {
-        imagePosition += 1;
-        image.dataset.pos = imagePosition;
-        image.addEventListener('load', function() {
-          const showImagePosition = showingImagePosition();
+      //if (alt.length > 0 && !containsClass(image, 'alt' && !isInline)) {
+      //  imagePosition += 1;
+      //  image.dataset.pos = imagePosition;
+      //  image.addEventListener('load', function() {
+      //    const showImagePosition = showingImagePosition();
 
-          let desc = document.createElement('p');
-          desc.classList.add('img_alt');
-          let imageAlt = alt;
+      //    let desc = document.createElement('p');
+      //    desc.classList.add('img_alt');
+      //    let imageAlt = alt;
 
-          const thisImgPos = image.dataset.pos;
-          // modify image caption is necessary
-          imageAlt = showImagePosition ? `${showImagePositionLabel} ${thisImgPos}: ${imageAlt}` : imageAlt;
-          desc.textContent = imageAlt;
-          image.insertAdjacentHTML('afterend', desc.outerHTML);
-        })
-      }
+      //    const thisImgPos = image.dataset.pos;
+      //    // modify image caption is necessary
+      //    imageAlt = showImagePosition ? `${showImagePositionLabel} ${thisImgPos}: ${imageAlt}` : imageAlt;
+      //    desc.textContent = imageAlt;
+      //    image.insertAdjacentHTML('afterend', desc.outerHTML);
+      //  })
+      //}
 
       if(isInline) {
         modifyClass(image, 'inline');
