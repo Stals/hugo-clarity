@@ -1,11 +1,15 @@
 <li class="post_item">
   <div class="excerpt">
     <div class="excerpt_header">
+      {{- with .Params.featured_image }}
+        <img src='{{ absURL . }}' style="width: 100%; height: auto; margin: 0 auto;" />
+      {{- end}}
       <h3 class="post_link">
         <a href="{{ .Permalink }}">{{ .Title  }}</a>
       </h3>
       {{ partial "post-meta" . }}
     </div>
+
     {{- with .Params.thumbnail }}
     <div class="excerpt_footer partition">
       <div class="excerpt_thumbnail">
