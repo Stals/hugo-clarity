@@ -1,8 +1,10 @@
 <div class="post_meta">
+  {{ if (eq .Params.type "post" )}}
   {{ partial "sprite" (dict "icon" "calendar") }}
   <span class="post_date">
     {{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) -}}
   </span>
+  {{ end }}
   {{ partial "hooks/post-meta-middle.html" . }}
   {{- with .Params.tag -}}
     {{- range . }}
