@@ -3,6 +3,7 @@
   <span class="post_date">
     {{ .Date.Format (default "Jan 2, 2006" $.Site.Params.dateFormat) -}}
   </span>
+  {{ partial "hooks/post-meta-middle.html" . }}
   {{- with .Params.tag -}}
     {{- range . }}
     {{- $tag := urlize . }}
