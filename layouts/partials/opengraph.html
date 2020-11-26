@@ -28,6 +28,9 @@
 {{- with $p.shareImage }}
   {{- $image = absURL .  }}
 {{- end }}
+{{- with $p.featured_image }}
+  {{- $image = absURL .  }}
+{{- end }}
 <meta property="og:locale" content="{{ .Lang }}" />
 {{ range .Translations }}
 <meta property="og:locale:alternate" content="{{ .Lang }}" />
