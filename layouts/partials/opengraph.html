@@ -48,6 +48,7 @@
 <meta property="og:title" content="{{ $title }}" />
 <meta property="og:description" content="{{ $summary }}" />
 <meta property="og:image" content="{{ $image }}" />
+{{/* Can be tested here: https://search.google.com/test/rich-results */}}
 {{ if (eq .Params.type "post") }}
   {{- $date := ( .Date.Format "2006-02-01") -}}
   {{- $date := (time .Date) }}
