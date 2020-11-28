@@ -64,6 +64,8 @@
       "url": "{{ $permalink }}",
       "datePublished": {{ $date  }},
       "dateModified": {{ $lastMod }},
+      "inLanguage": "{{ .Site.LanguageCode }}",
+      "wordcount": {{ .WordCount }},
       "author": {
         "@type": "Person",
         "name": "{{ $author }}"
