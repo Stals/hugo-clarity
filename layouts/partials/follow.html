@@ -5,7 +5,7 @@
   {{- if .internal }}
     {{ $url = absLangURL .url }}
   {{- end }}
-  <a href="{{ $url }}">
+  <a href="{{ $url }}" alt="Link to my {{ .item }}" aria-label="{{ .item }}">
     {{ partial "sprite" (dict "icon" .item) }}
   </a>
   {{- end }}
