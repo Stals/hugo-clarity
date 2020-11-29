@@ -5,7 +5,7 @@
   <nav class="nav">
     <a href='{{ absLangURL "" }}' class="nav_brand nav_item{{ if eq $centerLogo true }} nav_hide{{ end }}">
       {{- with $logo }}
-      <img src="{{ absURL . }}" class="logo" style="min-height: 36px; min-width: 240px;">
+      <img src="{{ absURL . }}" class="logo" style="min-height: 36px; min-width: 240px;" alt="Logo Image">
       {{- else }}
         {{ .Site.Title }}
       {{- end }}
