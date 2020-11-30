@@ -21,10 +21,10 @@
     {{ .TableOfContents }}
     {{ end }}
     {{- .Content }}
+    {{- partial "hooks/single-bottom" . }}
     {{ if and ( ne .Site.Params.comment false ) ( ne .Params.comment false ) }}
       {{ partial "comments" . }}
     {{ end }}
-    {{- partial "hooks/single-bottom" . }}
   </article>
   {{- partial "sidebar" . }}
 </div>
